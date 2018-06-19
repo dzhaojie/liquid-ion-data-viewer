@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Liquid-Ion Sensor Data Viewer</title>
+
+   
+    <link href="/css/bootstrap.css"  rel="stylesheet" type="text/css" />
+
+   
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="#">Home</a></li>
+            <li role="presentation" class="active"><a href="#">Account</a></li>
+ 	        </ul>
+        </nav>
+        <h1 class="text-muted">Liquid-Ion Data Viewer</h1>
+      </div>
+
+      <div class="jumbotron">
+        <h2>Sensor 1</h2>
+        <p class="lead"></p>
+        <nav>
+          <ul class="nav nav-pills pull-left">
+          <li><a class="btn btn-lg btn-success" href="show30min" role="button">Last 30 mins</a></li>
+          <li><a class="btn btn-lg btn-success" href="show1day" role="button">Past Day</a></li>
+          <li><a class="btn btn-lg btn-success" href="show1week" role="button">Past Week</a></li>
+        </ul >
+        </nav>
+      </div>
+      
+      <div id='graph30'></div>
+      
+      <!--<script src='/js/bootstrap.min.js'></script>-->
+      <script src="/js/jQuery.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://d3js.org/d3.v5.js"></script>
+      <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+      <script src="https://d3js.org/d3-request.v1.min.js"></script> 
+    
+<!--      <script type="text/javascript">
+           var jsondata;
+            console.log("getting the data");
+          function doSomethingWithData() {
+            console.log("get the data");
+          }
+      
+          d3.json("/data30min/", function(dataFromServer) {
+            jsondata = dataFromServer;
+            doSomethingWithData();
+            document.write(10);
+            document.write(jsondata);
+            document.write(30);
+          });
+
+      </script>-->
+      
+      <script src='/js/graph30min.js' type="text/javascript"></script>
+      
+
+      
+      <footer class="footer">
+        <p>&copy; 2012-2018, liquid-ion.com, Inc, Atlanta</p>
+      </footer>
+
+    </div>
+    
+  </body>
+</html>
